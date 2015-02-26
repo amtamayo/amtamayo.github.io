@@ -1,7 +1,37 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link href="styles/master.css" media="all" rel="stylesheet" type="text/css" />
+</head>
 <body>
 <h1>Hello World</h1>
-<p>I'm Anna and this is my web page and it is hosted with GitHub Pages.</p>
-</body>
+<div ng-controller="MyCtrl">
+     <h1>Hello, {{name}}!</h1>
+    <p>I am Anna-Marie, and this is Kaimito, the place where I work and play and test out all the things that my curious mind takes me.</p>
+    <p>Curiosity has taken me lots of places. Each stop usually leads to the next. Here's the <a class="toggle" data-toggle="long">long</a> and <a class="toggle" data-toggle="long">short</a> of it.</p>
+    <p> <span class="long" style="display:none;">I started out as a</span> Proofreader <span class="long" style="display:none;">for all things related to rice which led to a strong interest in design of books and publications.  From there I became a </span> Graphic Designer <span class="long" style="display:none;">producing books and journals also about rice. I did this for many years. Needing to find a new topic to apply these fine-tuned skills on, I found work as a </span> Writer <span class="long" style="display:none;"> for an architectural firm that needed someone who could both write and design. Coincidentally, this firm was also developing a drafting software that was at the time a competitor to AutoCAD. There I worked with programmers and designers which both inspired and infuriated me, what with the 3-letter acronyms, the ambiguous, terse and often deliberately confusing vocabulary of the Nerdery. The language of code so mystified me that I went back to school to learn it and that’s what I do now. I am a </span>Software Engineer<span class="long" style="display:none;">. I write code, I design systems and interfaces, I create data-driven applications for the web and for the desktop.</span>
+    </p>
+    <p>I ran a studio practice with a small group of friends, a sort of modern-day salon [In French, it means a large room meant to receive and entertain guests, a gathering of people, a private gathering of artists, conossieurs and intellectuals, like those exhibits in Paris when the expressionists were just busting out into the art scene of their time with their seemingly vague and unintentional brush strokes.], where we met each week to work on different projects ranging from printmaking to knitting to metalworking.</p>
+    <p>I am good at navigating the things in-between. I’ve always thought and worked this way. Thinking out of the box is my default. So if you are looking for someone who can code but knows about design, someone who can write but can also code it in marked up language, someone who can find the needle in a haystack in large datasets but also visualize and chart that needle and haystack, I’m a good bet.</p>
+    <div>Anna-Marie Tamayo
+        <ul>
+            <li><a href="mailto:amtamayo@gmail">email</a></li>
+            <li><a href="https://github.com/amtamayo">github</a></li>
+            <li><a href="https://twitter.com/_amtamayo">twitter</a></li>
+            <li><a href="http://kaimitostudio.blogspot.com/?view=flipcard">blog</li>
+        </ul>
+    </div>
+</div>
+<script>
+    (function($) {
+        $(function() {
+            // Toggle
+            $(".toggle").on('click', function() {
+                $("#" + $(this).data("toggle")).slideToggle();
+                $("." + $(this).data("toggle")).slideToggle();
+                return false;
+            });
+        });
+    })(jQuery);
+</script></body>
 </html>
